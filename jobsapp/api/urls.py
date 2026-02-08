@@ -49,8 +49,16 @@ urlpatterns = [
                 path("dashboard/", DashboardAPIView.as_view(), name="employer-dashboard"),
                 path("jobs/create/", JobCreateAPIView.as_view(), name="employer-job-create"),
                 path("applicants/", ApplicantsListAPIView.as_view(), name="employer-applicants-list"),
-                path("applicants/<int:job_id>/", ApplicantsPerJobListAPIView.as_view(), name="employer-applicants-per-job-list"),
-                path("applicants/<int:applicant_id>/<int:status_code>/update/", UpdateApplicantStatusAPIView.as_view(), name="employer-update-applicant-status"),
+                path(
+                    "applicants/<int:job_id>/",
+                    ApplicantsPerJobListAPIView.as_view(),
+                    name="employer-applicants-per-job-list",
+                ),
+                path(
+                    "applicants/<int:applicant_id>/<int:status_code>/update/",
+                    UpdateApplicantStatusAPIView.as_view(),
+                    name="employer-update-applicant-status",
+                ),
             ]
         ),
     ),
