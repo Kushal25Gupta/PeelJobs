@@ -28,7 +28,7 @@ schema_view = get_schema_view(
         default_version="v1",
         description="Django job portal API description",
         terms_of_service="https://www.google.com/policies/terms/",
-        contact=openapi.Contact(email="manzurulhoquerumi@gmail.com"),
+        contact=openapi.Contact(name="Kushal Gupta", email="your-email@example.com"),
         license=openapi.License(name="BSD License"),
     ),
     public=True,

@@ -33,7 +33,7 @@
 //     stages {
 //         stage('Checkout') {
 //             steps {
-//                 git 'https://github.com/manjurulhoque/django-job-portal.git'
+//                 git 'https://github.com/Kushal25Gupta/PeelJobs.git'
 //             }
 //         }
 //

@@ -6,8 +6,8 @@ from accounts.models import User
 class TestUserModel(TestCase):
     def setUp(self) -> None:
         self.valid_user = {
-            "first_name": "Manjurul",
-            "last_name": "Hoque",
+            "first_name": "Kushal",
+            "last_name": "Gupta",
             "role": "employee",
             "gender": "male",
             "email": "rumi1@gmail.com",
@@ -22,7 +22,7 @@ class TestUserModel(TestCase):
         self.assertEqual(str(User._meta.verbose_name_plural), "users")
 
     def test_full_name(self):
-        self.assertEqual(self.user.get_full_name(), "Manjurul Hoque")
+        self.assertEqual(self.user.get_full_name(), "Kushal Gupta")
 
     def test_email_label(self):
         user = User.objects.get(id=1)
