@@ -9,8 +9,8 @@ class TestEmployeeRegistrationForm(TestCase):
 
     def setUp(self) -> None:
         self.valid_user = {
-            "first_name": "Manjurul",
-            "last_name": "Hoque",
+            "first_name": "Kushal",
+            "last_name": "Gupta",
             "role": "employee",
             "gender": "male",
             "email": "rumi1@gmail.com",
