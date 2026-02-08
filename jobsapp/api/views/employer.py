@@ -18,9 +18,7 @@ class DashboardAPIView(ListAPIView):
     permission_classes = [IsAuthenticated, IsEmployer]
 
     def get_queryset(self):
-        return self.serializer_class.Meta.model.objects.filter(
-            user_id=self.request.user.id
-        )
+        return self.serializer_class.Meta.model.objects.filter(user_id=self.request.user.id)
 
 
 class JobCreateAPIView(CreateAPIView):
@@ -52,9 +50,7 @@ class UpdateApplicantStatusAPIView(APIView):
         applicant_id = kwargs.get("applicant_id")
         status_code = kwargs.get("status_code")
         try:
-            applicant = Applicant.objects.select_related("job__user").get(
-                id=applicant_id
-            )
+            applicant = Applicant.objects.select_related("job__user").get(id=applicant_id)
         except Applicant.DoesNotExist:
             data = {"message": "Applicant not found"}
             return JsonResponse(data, status=status.HTTP_404_NOT_FOUND)

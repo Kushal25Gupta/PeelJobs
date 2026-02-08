@@ -263,3 +263,9 @@ __pycache__/
 jobs/staticfiles
 logs/*.log.*
 logs/*
+
+db.sqlite3
+.env
+__pycache__/
+*.pyc
+.DS_Store
